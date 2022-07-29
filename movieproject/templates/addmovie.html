@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="text-align:center;font-family:fantasy;font-size:25px;"> Add New Movie</h1>
+<div style="text-align:center;">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Enter movie name"><br>
+    <input type="text" name="desc" placeholder="Enter description"><br>
+    <input type="text" name="year" placeholder="Year of release"><br>
+    <input type="file" name="img" ><br>
+    <input class="btn btn-warning" type="submit"><br>
+</form>
+    </div>
+
+{% endblock %}
